@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/yaml-test.dir/main.cpp.o  -o yaml-test /usr/local/lib/libyaml-cpp.a 

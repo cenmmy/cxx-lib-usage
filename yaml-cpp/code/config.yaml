@@ -1,0 +1,5 @@
+first-name: cheng
+last-name: manyuan
+info: {address: 金乡, age: 25}
+contries: {"中国": "北京", "美国": "华盛顿"}
+nums: [1, 2, 3, 4]
