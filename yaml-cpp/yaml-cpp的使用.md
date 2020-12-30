@@ -80,6 +80,17 @@ namespace YAML {
 
 ```c++
 if (YAML::NodeType::Null == config["girl-firend"].Type()) {
-
+    std::cout << "这家伙没有女朋友！哈哈哈！" << std::endl;
 }
+```
+
+### 6. yaml-cpp写配置文件
+
+```c++
+// 写配置到配置文件中
+std::ofstream fout(config_path);
+config["score"] = 90;
+// 节点对象重载了输出运算符
+fout << config;
+fout.close();
 ```

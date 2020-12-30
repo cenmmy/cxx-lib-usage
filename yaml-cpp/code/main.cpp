@@ -1,5 +1,6 @@
 #include <iostream>
 #include <yaml-cpp/yaml.h>
+#include <fstream>
 
 int main()
 {
@@ -32,5 +33,15 @@ int main()
     {
         std::cout << iter->as<int>() << std::endl;
     }
+    // 判断节点类型
+    if (config["girl-firend"].Type() == YAML::NodeType::Null) {
+        std::cout << first_name << " " << last_name << "没有女朋友" << std::endl;
+    }
+    // 写配置到配置文件中
+    std::ofstream fout(config_path);
+    config["score"] = 90;
+    // 节点对象重载了输出运算符
+    fout << config;
+    fout.close();
     return 0;
 }
