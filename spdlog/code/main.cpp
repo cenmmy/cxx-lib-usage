@@ -30,7 +30,7 @@ int main()
         auto daily_sink = std::make_shared<spdlog::sinks::daily_file_sink_mt>(daily_log_file, 13, 51);
         auto net_logger = std::make_shared<spdlog::logger>("net", daily_sink);
         auto hw_logger  = std::make_shared<spdlog::logger>("hw",  daily_sink);
-        auto db_logger  = std::make_shared<spdlog::logger>("db",  daily_sink); 
+        auto db_logger  = std::make_shared<spdlog::logger>("db",  daily_sink);
 
         net_logger->info("net");
         hw_logger->info("hw");
